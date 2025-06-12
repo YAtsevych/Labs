@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab-1.10(1)</title>
+    <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      // Класова компонента
+      class HobbyClass extends React.Component {
+        render() {
+          return (
+            <h2>
+              Моє хоббі - програмувати на JavaScript. Це розвиває логічне
+              мислення.
+            </h2>
+          )
+        }
+      }
+
+      // Функціональна компонента
+      function HobbyFunction() {
+        return (
+          <h2>
+            Моє хоббі - програмувати на JavaScript. Це розвиває логічне
+            мислення.
+          </h2>
+        )
+      }
+
+      const App = () => (
+        <div style={{ textAlign: 'center', marginTop: '50px' }}>
+          <HobbyClass />
+          <HobbyFunction />
+        </div>
+      )
+
+      ReactDOM.createRoot(document.getElementById('root')).render(<App />)
+    </script>
+  </body>
+</html>
